@@ -169,7 +169,8 @@ var Home = function Home() {
           return console.log("click me");
         } },
       "Click me"
-    )
+    ),
+    _react2.default.createElement("img", { src: __webpack_require__(7) })
   );
 };
 
@@ -180,6 +181,12 @@ exports.default = Home;
 /***/ (function(module, exports) {
 
 module.exports = require("semantic-ui-react");
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "Untitled1-7072c51436e7c5dd9f5409d8eb2956d8.png";
 
 /***/ })
 /******/ ]);

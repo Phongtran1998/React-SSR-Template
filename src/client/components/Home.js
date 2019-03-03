@@ -5,6 +5,7 @@ const Home = () => {
     <Container>
       <div>I am the best home component</div>
       <Button onClick={() => console.log("click me")}>Click me</Button>
+      <img src={require("../assets/Untitled1.png")} />
     </Container>
   );
 };

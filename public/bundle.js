@@ -43995,7 +43995,8 @@ var Home = function Home() {
           return console.log("click me");
         } },
       "Click me"
-    )
+    ),
+    _react2.default.createElement("img", { src: __webpack_require__(664) })
   );
 };
 
@@ -65982,6 +65983,12 @@ Feed.User = __WEBPACK_IMPORTED_MODULE_16__FeedUser__["a" /* default */];
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Statistic__["a"]; });
 
 
+
+/***/ }),
+/* 664 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "Untitled1-7072c51436e7c5dd9f5409d8eb2956d8.png";
 
 /***/ })
 /******/ ]);
