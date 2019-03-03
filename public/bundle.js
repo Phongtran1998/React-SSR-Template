@@ -65988,7 +65988,7 @@ Feed.User = __WEBPACK_IMPORTED_MODULE_16__FeedUser__["a" /* default */];
 /* 664 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "Untitled1-7072c51436e7c5dd9f5409d8eb2956d8.png";
+module.exports = __webpack_require__.p + "7072c51436e7c5dd9f5409d8eb2956d8.png";
 
 /***/ })
 /******/ ]);

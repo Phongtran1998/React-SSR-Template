@@ -84,11 +84,15 @@ var _renderer = __webpack_require__(3);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
+var _serveFavicon = __webpack_require__(9);
+
+var _serveFavicon2 = _interopRequireDefault(_serveFavicon);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
-
 app.use(_express2.default.static("public"));
+
 app.get("/", function (req, res) {
   res.send((0, _renderer2.default)());
 });
@@ -122,11 +126,15 @@ var _Home = __webpack_require__(5);
 
 var _Home2 = _interopRequireDefault(_Home);
 
+var _rendererStyle = __webpack_require__(8);
+
+var _rendererStyle2 = _interopRequireDefault(_rendererStyle);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function () {
   var content = (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null));
-  return "\n    <html>\n      <head>\n        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css\"></link>\n      </head>\n      <style>\n        body {\n          margin: 0;\n        }\n        .loader {\n          position: absolute;\n          left: 50%;\n          top: 30%;\n          z-index: 1;\n          width: 80px;\n          height: 80px;\n          margin: -75px 0 0 -75px;\n          border: 8px solid #f3f3f3;\n          border-radius: 50%;\n          border-top: 8px solid #020c1c;\n          -webkit-animation: spin 2s linear infinite;\n          animation: spin 2s linear infinite;\n        }\n\n        /* Safari */\n        @-webkit-keyframes spin {\n          0% { -webkit-transform: rotate(0deg); }\n          100% { -webkit-transform: rotate(360deg); }\n        }\n\n        @keyframes spin {\n          0% { transform: rotate(0deg); }\n          100% { transform: rotate(360deg); }\n        }\n        #root {\n          height: 100%;\n          width: 100%;\n        }\n        .dimmed {\n          height: 100%;\n          width: 100%;\n          background: linear-gradient(\n          rgba(0, 0, 0, 0.7),\n          rgba(0, 0, 0, 0.7)\n        );\n        }\n      </style>\n      <body>\n        <div id=\"root\">\n          <div class=\"dimmed\">\n            <div class=\"loader\"></div>\n          </div>\n        </div>\n        <script src=\"bundle.js\"></script>\n      </body>\n    </html>\n  ";
+  return "\n    <html>\n      <head>\n        <title>SSR</title>\n        <link rel='shortcut icon' type='image/x-icon' href=\"https://raw.githubusercontent.com/esausilva/react-starter-boilerplate-hmr/master/public/favicon.ico\" />\n        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css\"/>\n      </head>\n      <style>\n        " + (0, _rendererStyle2.default)() + "\n      </style>\n      <body>\n        <div id=\"root\">\n          <div class=\"dimmed\">\n            <div class=\"loader\"></div>\n          </div>\n        </div>\n        <script src=\"bundle.js\"></script>\n      </body>\n    </html>\n  ";
 };
 
 /***/ }),
@@ -186,7 +194,28 @@ module.exports = require("semantic-ui-react");
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "Untitled1-7072c51436e7c5dd9f5409d8eb2956d8.png";
+module.exports = __webpack_require__.p + "7072c51436e7c5dd9f5409d8eb2956d8.png";
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  return "\n    body {\n      margin: 0;\n    }\n    .loader {\n      position: absolute;\n      left: 50%;\n      top: 30%;\n      z-index: 1;\n      width: 80px;\n      height: 80px;\n      margin: -75px 0 0 -75px;\n      border: 8px solid #f3f3f3;\n      border-radius: 50%;\n      border-top: 8px solid #020c1c;\n      -webkit-animation: spin 2s linear infinite;\n      animation: spin 2s linear infinite;\n    }\n\n    @-webkit-keyframes spin {\n      0% {\n        -webkit-transform: rotate(0deg);\n      }\n      100% {\n        -webkit-transform: rotate(360deg);\n      }\n    }\n\n    @keyframes spin {\n      0% {\n        transform: rotate(0deg);\n      }\n      100% {\n        transform: rotate(360deg);\n      }\n    }\n    #root {\n      height: 100%;\n      width: 100%;\n    }\n    .dimmed {\n      height: 100%;\n      width: 100%;\n      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));\n    }\n  ";
+};
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+module.exports = require("serve-favicon");
 
 /***/ })
 /******/ ]);
