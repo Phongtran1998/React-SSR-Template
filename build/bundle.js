@@ -93,7 +93,7 @@ app.get("/", function (req, res) {
   res.send((0, _renderer2.default)());
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 /***/ }),
 /* 2 */
@@ -126,7 +126,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function () {
   var content = (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null));
-  return "\n    <html>\n      <head></head>\n      <style>\n        body {\n          margin: 0;\n        }\n        .loader {\n          position: absolute;\n          left: 50%;\n          top: 30%;\n          z-index: 1;\n          width: 80px;\n          height: 80px;\n          margin: -75px 0 0 -75px;\n          border: 8px solid #f3f3f3;\n          border-radius: 50%;\n          border-top: 8px solid #020c1c;\n          -webkit-animation: spin 2s linear infinite;\n          animation: spin 2s linear infinite;\n        }\n\n        /* Safari */\n        @-webkit-keyframes spin {\n          0% { -webkit-transform: rotate(0deg); }\n          100% { -webkit-transform: rotate(360deg); }\n        }\n\n        @keyframes spin {\n          0% { transform: rotate(0deg); }\n          100% { transform: rotate(360deg); }\n        }\n        #root {\n          height: 100%;\n          width: 100%;\n        }\n        .dimmed {\n          height: 100%;\n          width: 100%;\n          background: linear-gradient(\n          rgba(0, 0, 0, 0.7),\n          rgba(0, 0, 0, 0.7)\n        );\n        }\n      </style>\n      <body>\n        <div id=\"root\">\n          <div class=\"dimmed\">\n            <div class=\"loader\"></div>\n          </div>\n        </div>\n        <script src=\"bundle.js\"></script>\n      </body>\n    </html>\n  ";
+  return "\n    <html>\n      <head>\n        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css\"></link>\n      </head>\n      <style>\n        body {\n          margin: 0;\n        }\n        .loader {\n          position: absolute;\n          left: 50%;\n          top: 30%;\n          z-index: 1;\n          width: 80px;\n          height: 80px;\n          margin: -75px 0 0 -75px;\n          border: 8px solid #f3f3f3;\n          border-radius: 50%;\n          border-top: 8px solid #020c1c;\n          -webkit-animation: spin 2s linear infinite;\n          animation: spin 2s linear infinite;\n        }\n\n        /* Safari */\n        @-webkit-keyframes spin {\n          0% { -webkit-transform: rotate(0deg); }\n          100% { -webkit-transform: rotate(360deg); }\n        }\n\n        @keyframes spin {\n          0% { transform: rotate(0deg); }\n          100% { transform: rotate(360deg); }\n        }\n        #root {\n          height: 100%;\n          width: 100%;\n        }\n        .dimmed {\n          height: 100%;\n          width: 100%;\n          background: linear-gradient(\n          rgba(0, 0, 0, 0.7),\n          rgba(0, 0, 0, 0.7)\n        );\n        }\n      </style>\n      <body>\n        <div id=\"root\">\n          <div class=\"dimmed\">\n            <div class=\"loader\"></div>\n          </div>\n        </div>\n        <script src=\"bundle.js\"></script>\n      </body>\n    </html>\n  ";
 };
 
 /***/ }),

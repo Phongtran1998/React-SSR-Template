@@ -6,7 +6,9 @@ export default () => {
   const content = renderToString(<Home />);
   return `
     <html>
-      <head></head>
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"></link>
+      </head>
       <style>
         body {
           margin: 0;
