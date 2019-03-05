@@ -1,11 +1,12 @@
 import React from "react";
-import { Button, Container } from "semantic-ui-react";
+import { Button, Container, Header } from "semantic-ui-react";
 const Home = () => {
   return (
     <Container>
-      <div>I am the best home component</div>
+      <Header color="blue" as="h1">
+        I am the best home component
+      </Header>
       <Button onClick={() => console.log("click me")}>Click me</Button>
-      <img src={require("../assets/Untitled1.png")} />
     </Container>
   );
 };

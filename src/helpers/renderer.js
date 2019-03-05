@@ -1,10 +1,17 @@
 import React from "react";
+import { Provider } from "react-redux";
 import { renderToString } from "react-dom/server";
-import Home from "../client/components/Home";
-import style from "./rendererStyle";
+import { StaticRouter } from "react-router-dom";
+import Routes from "../client/Routes";
 
-export default () => {
-  const content = renderToString(<Home />);
+export default (req, store) => {
+  const content = renderToString(
+    <Provider store={store}>
+      <StaticRouter location={req.path} context={{}}>
+        <Routes />
+      </StaticRouter>
+    </Provider>
+  );
   return `
     <html>
       <head>
@@ -12,15 +19,8 @@ export default () => {
         <link rel='shortcut icon' type='image/x-icon' href="https://raw.githubusercontent.com/esausilva/react-starter-boilerplate-hmr/master/public/favicon.ico" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
       </head>
-      <style>
-        ${style()}
-      </style>
       <body>
-        <div id="root">
-          <div class="dimmed">
-            <div class="loader"></div>
-          </div>
-        </div>
+        <div id="root">${content}</div>
         <script src="bundle.js"></script>
       </body>
     </html>
