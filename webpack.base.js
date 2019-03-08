@@ -1,5 +1,10 @@
-const HtmlWebpackPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 module.exports = {
+  mode: "development",
+  performance: {
+    hints: false
+  },
   module: {
     rules: [
       {
@@ -19,5 +24,10 @@ module.exports = {
         use: ["file-loader"]
       }
     ]
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: "./src/assets/favicon.ico", to: "./public" }
+    ])
+  ]
 };
